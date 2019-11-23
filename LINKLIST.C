@@ -59,7 +59,7 @@ int main()
  do
  {
 
-  printf("Enter your choice\n");
+  printf("\nEnter your choice\n");
   scanf("%d",&num);
 
   switch
@@ -136,7 +136,7 @@ int main()
 	 printf("\n Enter the name you want to search with\n");
 	 scanf("%s", n1);
 	 st = SearchByName(n1);
-	 if (st.name == -1)
+	 if (st.id == -1)
 	 {
 		printf("\n There's no data found");
 	 }
@@ -367,7 +367,7 @@ int main()
 		}
 		 if( !ptr)
 		  {
-           ptr->st.id=-1;
+		   ptr->st.id=-1;
 		  }
 
 	  return ptr->st;
@@ -378,7 +378,7 @@ int main()
 	{
 	struct Node* ptr;
 	ptr =pHead;
-	while(ptr && strcmp(ptr->st.name, n1))
+	while(ptr && strcmp(ptr->st.name, n1)!=0)
 	{
 	 ptr = ptr->pNext;
 	}
